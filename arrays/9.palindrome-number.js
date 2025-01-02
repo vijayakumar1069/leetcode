@@ -11,6 +11,15 @@
  */
 var isPalindrome = function (x) {
   if (x < 0) return false;
-  return x === parseInt(x.toString().split("").reverse().join(""), 10);
+
+  let num = x;
+  let reversed = 0;
+  while (num > 0) {
+    const digit = num % 10;
+    reversed = reversed * 10 + digit;
+    num = Math.floor(num / 10);
+  }
+
+  return x === reversed;
 };
 // @lc code=end
