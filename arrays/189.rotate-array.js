@@ -21,8 +21,7 @@ var rotate = function (nums, k) {
     }
   }
 
-  // Reverse the entire array
-  reverse(nums, 0, nums.length - 1);
+  nums.reverse();
 
   // Reverse the first k elements
   reverse(nums, 0, k - 1);
